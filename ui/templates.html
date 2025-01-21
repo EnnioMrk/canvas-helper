@@ -1,0 +1,61 @@
+<template id="number">
+    <div class="flex justify-between items-center">
+        <label for="{{name}}" class="text-zinc-200 text-2xl">{{text}}:</label>
+        <input
+            type="number"
+            id="{{name}}"
+            class="numberInput bg-zinc-700 p-2 rounded-lg text-zinc-200 text-2xl"
+            min="{{min}}"
+            max="{{max}}"
+            value="{{value}}"
+            var="input-number"
+        />
+    </div>
+</template>
+<template id="button">
+    <button
+        id="{{name}}Button"
+        class="bg-zinc-700 p-4 rounded-lg text-zinc-200 text-2xl"
+    >
+        {{text}}
+    </button>
+</template>
+<template id="range">
+    <div class="flex justify-between items-center">
+        <label for="{{name}}" class="text-zinc-200 text-2xl">{{text}}:</label>
+        <div class="rangeSlider flex flex-col w-4/5">
+            <div class="relative">
+                <input
+                    id="fromSlider"
+                    class="fromSlider var-change-fromSlider"
+                    type="range"
+                    value="{{fromValue}}"
+                    min="{{fromMin}}"
+                    max="{{fromMax}}"
+                    var="input-from"
+                />
+                <input
+                    id="toSlider"
+                    class="toSlider"
+                    type="range"
+                    value="{{toValue}}"
+                    min="{{toMin}}"
+                    max="{{toMax}}"
+                    var="input-to"
+                />
+            </div>
+            <div
+                class="form_control relative flex items-center justify-between text-2xl text-zinc-700"
+            >
+                <span id="fromInput" class="fromInput w-16 flex justify-center"
+                    >{{fromValue}}</span
+                >
+                <span class="h-min">-</span>
+                <span id="toInput" class="toInput w-16 flex justify-center"
+                    >{{toValue}}</span
+                >
+                <span class="h-min">%</span>
+            </div>
+        </div>
+    </div>
+</template>
