@@ -143,10 +143,8 @@ class cvh_game {
         });
     }
     clear_canvas() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.fillStyle = this.bgColor;
-        this.ctx.rect(0, 0, this.canvas.width, this.canvas.height);
-        this.ctx.fill();
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     }
     update_objects() {
         this.om.update_objects();

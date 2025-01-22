@@ -73,6 +73,9 @@ class Logger {
     game(message, ...args) {
         this.#log('GAME', message, ...args);
     }
+    clear() {
+        console.clear();
+    }
 }
 
 const log = Logger.getInstance();
